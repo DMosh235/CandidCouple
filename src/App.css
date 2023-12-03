@@ -122,3 +122,26 @@ body {
   }
   }
 }
+
+.image-container {
+  width: 300px; /* Set the width of your square frame */
+  height: 300px; /* Set the height of your square frame */
+  overflow: hidden;
+  border: 5px solid #3498db; /* Set the color of your frame border */
+  margin: 0 auto; /* Center the frame on the page */
+  background-color: #f0f0f0; /* Set the background color for empty space */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image {
+  width: 100%; /* Make the image width fill the container */
+  height: 100%; /* Make the image height fill the container */
+  object-fit: cover; /* Scale the image to cover the container */
+  transition: transform 0.5s; /* Optional: Add a smooth transition effect */
+}
+
+.image:hover {
+  transform: scale(1.1); /* Optional: Add a zoom effect on hover */
+}
