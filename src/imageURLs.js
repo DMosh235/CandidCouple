@@ -9,4 +9,4 @@ export const hardcodedImageUrls = [
     const randomIndex = Math.floor(Math.random() * hardcodedImageUrls.length);
     return hardcodedImageUrls[randomIndex];
   };
-  
+   
