@@ -1,3 +1,5 @@
+/* Add or update the following styles in your CSS file */
+
 body {
   margin: 0;
   display: flex;
@@ -95,55 +97,26 @@ body {
   }
 }
 
-.image-frame {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  overflow: hidden;
-  border: 8px solid #721c24;; 
-}
-
-.hidden-image {
-  width: 125%; /* Make the image 25% larger */
-  height: auto;
-  max-width: 100%;
-  max-height: 100vh;
-}
-
-/* Media query for smaller screens (e.g., mobile devices) */
-@media (max-width: 844px) {
-  .image-frame {
-    border: 4px solid #721c24;; /* Adjust border color for smaller screens */
-
-  .hidden-image {
-    max-width: 100%;
-    max-height: 70vh;
-  }
-  }
-}
-
 .image-container {
-  width: 300px; /* Set the width of your square frame */
-  height: 300px; /* Set the height of your square frame */
-  overflow: hidden;
-  border: 5px solid rgba(255, 0, 0, 1); /* Set the color of your frame border */
-  margin: 0 auto; /* Center the frame on the page */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: radial-gradient(rgba(247, 211, 227, 1), rgba(255, 0, 0, 1));
-  margin-bottom: 5%;
+  --s: 5px; /* Adjust the size to be half (50%) of the original size */
+  padding: var(--s);
+  border: calc(2 * var(--s)) solid #0000;
+  outline: 1px solid #000;
+  outline-offset: calc(-1 * var(--s));
+  background: conic-gradient(from 90deg at 1px 1px, #0000 25%, #000 0);
+  max-width: 50%; /* Set the maximum width to be 50% of the container width */
+  margin: 0 auto; /* Center the container on the page */
 }
 
 .image {
   width: 100%; /* Make the image width fill the container */
-  height: 100%; /* Make the image height fill the container */
+  height: auto; /* Maintain the aspect ratio */
+  max-height: 100%; /* Ensure the image doesn't exceed the container height */
   object-fit: contain; /* Keep the entire image within the container without cropping */
   transition: transform 0.5s; /* Optional: Add a smooth transition effect */
 }
 
-.imageButton{
+.imageButton {
   background-color: #f7d3e3;
   border: 2px solid #721c24;
   border-radius: 8px;
@@ -240,5 +213,5 @@ body {
   font-style: oblique;
   font-weight: bold;
   max-width: 100%;
-  white-space: nowrap; 
+  white-space: nowrap;
 }
