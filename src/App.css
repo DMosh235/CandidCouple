@@ -182,7 +182,7 @@ body {
   -webkit-user-select: none;
   touch-action: manipulation;
   position: absolute;
-  top: 70%; /* Adjust the position as needed */
+  top: 80%; /* Adjust the position as needed */
   left: 50%;
   transform: translateX(-50%);
   opacity: 1; /* Remove animation opacity */
@@ -229,13 +229,13 @@ body {
 
 .countdown {
   position: fixed;
-  top: 15%;
+  top: 10%;
   left: 50%;
   transform: translateX(-50%);
   background-color: #f7d3e3;
   padding: 10px;
   color: #721c24;
-  font-size: 56px;
+  font-size: 32px;
   font-family: serif;
   font-style: oblique;
 }
