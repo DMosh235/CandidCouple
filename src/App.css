@@ -133,6 +133,7 @@ body {
   align-items: center;
   justify-content: center;
   background: radial-gradient(rgba(247, 211, 227, 1), rgba(255, 0, 0, 1));
+  margin-bottom: 5%;
 }
 
 .image {
@@ -224,4 +225,17 @@ body {
   .button-56.image-page {
     padding: 0 40px;
   }
+}
+
+.countdown {
+  position: fixed;
+  top: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #f7d3e3;
+  padding: 10px;
+  color: #721c24;
+  font-size: 56px;
+  font-family: serif;
+  font-style: oblique;
 }
