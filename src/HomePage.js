@@ -18,7 +18,7 @@ const HomePage = () => {
       <div>
         <div className="title">Candid Couple</div>
         <button className="button-56 fade-in" onClick={handleButtonClick}>
-          Button 56
+          Continue
         </button>
       </div>
     </div>
