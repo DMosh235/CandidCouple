@@ -229,13 +229,16 @@ body {
 
 .countdown {
   position: fixed;
-  top: 10%;
+  top: 13%;
   left: 50%;
   transform: translateX(-50%);
   background-color: #f7d3e3;
   padding: 10px;
   color: #721c24;
-  font-size: 32px;
+  font-size: 24px;
   font-family: serif;
   font-style: oblique;
+  font-weight: bold;
+  max-width: 100%;
+  white-space: nowrap; 
 }
