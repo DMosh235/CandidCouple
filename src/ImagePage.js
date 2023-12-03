@@ -46,6 +46,7 @@ const hardcodedImageUrls = [
   "https://i.imgur.com/uhENx18.jpg",
   "https://i.imgur.com/aOIItA5.jpg",
   "https://i.imgur.com/9Vk4iS9.jpg",
+  "https://i.imgur.com/EzGwfdb.jpg"
 ];
 
 export default ImagePage;
