@@ -1,4 +1,14 @@
 {
-    "functions": "functions"
-}
+    "version": 2,
+    "functions": {
+      "api/updateImage": {
+        "handler": "api/updateImage.js",
+        "events": [
+          {
+            "schedule": "cron(0 0 * * *)" 
+          }
+        ]
+      }
+    }
+  }
   
