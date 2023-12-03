@@ -1,14 +1,18 @@
+// App.js
+
 import React from 'react';
-import './App.css'; // You can create this CSS file for styling
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import HomePage from './HomePage';
+import ImagePage from './ImagePage';
 
 const App = () => {
   return (
-    <div>
-      <div className="title">Candid Couple</div>
-      <button className="button-56">Continue</button>
-    </div>
-
-  
+    <Router>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/image-page" element={<ImagePage />} />
+      </Routes>
+    </Router>
   );
 };
 
