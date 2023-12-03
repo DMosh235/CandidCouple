@@ -19,30 +19,50 @@ const ImagePage = () => {
   // Function to get a random image URL based on the date
   const getRandomImageUrlBasedOnDate = (date) => {
     const imageUrls = [
-      'https://i.imgur.com/8hqd6cA.jpg',
-      'https://i.imgur.com/Y8g4jv7.jpg',
-      'https://i.imgur.com/DF2S3FS.jpg',
-      'https://i.imgur.com/m53r6oI.jpg',
-      'https://i.imgur.com/LrMUY9o.jpg',
-      'https://i.imgur.com/OT0d72f.jpg',
-      'https://i.imgur.com/wC1NMTo.jpg',
-      'https://i.imgur.com/aiMc7bc.jpg',
-      'https://i.imgur.com/kQp9tPe.jpg',
-      'https://i.imgur.com/aOIItA5.jpg',
-      'https://i.imgur.com/pu76vwV.jpg',
+      'https://i.imgur.com/9Vk4iS9.jpg',
       'https://i.imgur.com/EzGwfdb.jpg',
       'https://i.imgur.com/Djx6gYv.jpg',
+      'https://i.imgur.com/aiMc7bc.jpg',
+      'https://i.imgur.com/OT0d72f.jpg',
+      'https://i.imgur.com/LrMUY9o.jpg',
       'https://i.imgur.com/og8gcHk.jpg',
-      'https://i.imgur.com/uhENx18.jpg',
       'https://i.imgur.com/urV5Je3.jpg',
-      'https://i.imgur.com/9Vk4iS9.jpg',
+      'https://i.imgur.com/DF2S3FS.jpg',
+      'https://i.imgur.com/Y8g4jv7.jpg',
+      'https://i.imgur.com/8hqd6cA.jpg',
+      'https://i.imgur.com/pu76vwV.jpg',
+      'https://i.imgur.com/wC1NMTo.jpg',
+      'https://i.imgur.com/m53r6oI.jpg',
+      'https://i.imgur.com/kQp9tPe.jpg',
+      'https://i.imgur.com/aOIItA5.jpg',
+      'https://i.imgur.com/og8gcHk.jpg',
+      'https://i.imgur.com/QXh1MiD.jpg',
+      'https://i.imgur.com/D4bEUjM.jpg',
+      'https://i.imgur.com/68yOKmX.jpg',
+      'https://i.imgur.com/8GD6nzg.jpg',
+      'https://i.imgur.com/xykf59X.jpg',
+      'https://i.imgur.com/g3tVtJd.jpg',
+      'https://i.imgur.com/PY3e3On.jpg',
+      'https://i.imgur.com/6JZv0rf.jpg',
+      'https://i.imgur.com/nHi5uUM.jpg',
+      'https://i.imgur.com/PfSoD5E.jpg',
+      'https://i.imgur.com/XGSR280.jpg',
+      'https://i.imgur.com/xrbV8Kq.jpg',
+      'https://i.imgur.com/J7bC6PS.jpg',
+      'https://i.imgur.com/8T730xd.jpg',
+      'https://i.imgur.com/JwddzE3.jpg',
+      'https://i.imgur.com/V90rhek.jpg',
+      'https://i.imgur.com/g3tVtJd.jpg',
+      'https://i.imgur.com/68yOKmX.jpg',
+      'https://i.imgur.com/8GD6nzg.jpg',
     ];
-
+  
     const dayOfYear = getDayOfYear(date);
     const index = dayOfYear % imageUrls.length;
-
+  
     return imageUrls[index];
   };
+  
 
   const updateCountdown = () => {
     const now = new Date();
