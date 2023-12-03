@@ -1,54 +1,51 @@
 // ImagePage.js
 
-import React, { useEffect, useState } from 'react';
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
-import AWS from 'aws-sdk'; // Import AWS SDK
 
-// Configure AWS with your credentials
-AWS.config.update({
-  accessKeyId: '',
-  secretAccessKey: '',
-  region: 'us-east-2',
-});
-
-
-const s3 = new AWS.S3();
-const bucketName = 'usinphotos';
-
-const getRandomImage = async () => {
-  try {
-    const listObjectsResponse = await s3.listObjectsV2({ Bucket: bucketName }).promise();
-    const randomObject = listObjectsResponse.Contents[Math.floor(Math.random() * listObjectsResponse.Contents.length)];
-    const imageUrl = s3.getSignedUrl('getObject', { Bucket: bucketName, Key: randomObject.Key });
-
-    return imageUrl;
-  } catch (error) {
-    console.error('Error listing objects:', error);
-    return null;
-  }
+const getRandomImageUrl = () => {
+  const randomIndex = Math.floor(Math.random() * hardcodedImageUrls.length);
+  return hardcodedImageUrls[randomIndex];
 };
 
 const ImagePage = () => {
-  const [imageSrc, setImageSrc] = useState(null);
+  const imageUrl = getRandomImageUrl();
+  const navigate = useNavigate();
 
-  useEffect(() => {
-    const fetchRandomImage = async () => {
-      const imageUrl = await getRandomImage();
-      setImageSrc(imageUrl);
-    };
-
-    fetchRandomImage();
-  }, []);
+  const handleButtonClick = () => {
+    // Navigate to the ImagePage when the button is clicked
+    navigate('/');
+  };
 
   return (
     <div className="image-container">
-      <img
-        className="image"
-        src="https://bloximages.newyork1.vip.townnews.com/miltonindependent.com/content/tncms/assets/v3/editorial/c/f8/cf87e12c-cf88-11eb-b67d-631a1042b820/60cb77c6e6772.image.jpg?crop=1568%2C823%2C0%2C249&resize=1200%2C630&order=crop%2Cresize"  // Replace with the URL of your image
-        alt="Pic of Us"
-      />
+      <img className="image" src={imageUrl} alt="Random Image" />
+      <button className="button-56 image-page" onClick={handleButtonClick}>
+        Back Home
+      </button>
     </div>
   );
 };
+
+const hardcodedImageUrls = [
+  "https://i.imgur.com/pu76vwV.jpg",
+  "https://i.imgur.com/kQp9tPe.jpg",
+  "https://i.imgur.com/EzGwfdb.jpg",
+  "https://i.imgur.com/Y8g4jv7.jpg",
+  "https://i.imgur.com/8hqd6cA.jpg",
+  "https://i.imgur.com/DF2S3FS.jpg",
+  "https://i.imgur.com/urV5Je3.jpg",
+  "https://i.imgur.com/LrMUY9o.jpg",
+  "https://i.imgur.com/wC1NMTo.jpg",
+  "https://i.imgur.com/m53r6oI.jpg",
+  "https://i.imgur.com/OT0d72f.jpg",
+  "https://i.imgur.com/aiMc7bc.jpg",
+  "https://i.imgur.com/Djx6gYv.jpg",
+  "https://i.imgur.com/og8gcHk.jpg",
+  "https://i.imgur.com/uhENx18.jpg",
+  "https://i.imgur.com/aOIItA5.jpg",
+  "https://i.imgur.com/9Vk4iS9.jpg",
+];
 
 export default ImagePage;
