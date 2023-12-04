@@ -22,7 +22,7 @@ const HomePage = () => {
             className="button-56 fade-in"
             onClick={() => handleButtonClick('image-page')}
           >
-            Continue
+            Daily Pic
           </button>
           <button
             id="button-2"
