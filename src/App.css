@@ -1,8 +1,7 @@
-/* Add or update the following styles in your CSS file */
-
 body {
   margin: 0;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 100vh;
@@ -17,6 +16,14 @@ body {
   animation: slideUp 2s ease-out 2s forwards;
   animation-fill-mode: both;
   transition: opacity 1s ease-in-out;
+  margin-bottom: 20px;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px;
 }
 
 .button-56 {
@@ -27,7 +34,7 @@ body {
   cursor: pointer;
   font-family: Inter, sans-serif;
   font-size: 16px;
-  height: 48px;
+  height: 48px; /* Set the height to ensure buttons are the same size */
   line-height: 24px;
   padding: 0 25px;
   text-align: center;
@@ -35,13 +42,11 @@ body {
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  opacity: 0; /* Start with opacity set to 0 */
+  opacity: 0;
   animation: fadeIn 2s ease-out 4s forwards;
   animation-fill-mode: both;
+  margin-bottom: 20px;
+  position: relative;
 }
 
 .button-56:after {
@@ -72,6 +77,14 @@ body {
   outline: 0;
 }
 
+.button-56:nth-child(1) {
+  top: 50%;
+}
+
+.button-56:nth-child(2) {
+  top: 70%;
+}
+
 @media (min-width: 768px) {
   .button-56 {
     padding: 0 40px;
@@ -90,10 +103,10 @@ body {
 
 @keyframes slideUp {
   0% {
-    transform: translateY(50%);
+    transform: translateY(-50%);
   }
   100% {
-    transform: translateY(-500%);
+    transform: translateY(-350%);
   }
 }
 
@@ -214,4 +227,21 @@ body {
   font-weight: bold;
   max-width: 100%;
   white-space: nowrap;
+}
+
+.quote-container {
+  text-align: center;
+  margin: 20px;
+}
+
+.quote {
+  font-size: 1.5em;
+  font-style: italic;
+  color: #721c24;
+}
+
+.author {
+  margin-top: 10px;
+  font-size: 1.2em;
+  color: #721c24;
 }

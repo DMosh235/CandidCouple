@@ -4,22 +4,34 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import './App.css';
 
-
 const HomePage = () => {
   const navigate = useNavigate();
 
-  const handleButtonClick = () => {
-    // Navigate to the ImagePage when the button is clicked
-    navigate('/image-page');
+  const handleButtonClick = (page) => {
+    // Navigate to the corresponding page when a button is clicked
+    navigate(`/${page}`);
   };
 
   return (
     <div>
       <div>
         <div className="title">Candid Couple</div>
-        <button className="button-56 fade-in" onClick={handleButtonClick}>
-          Continue
-        </button>
+        <div className="button-container">
+          <button
+            id="button-1"
+            className="button-56 fade-in"
+            onClick={() => handleButtonClick('image-page')}
+          >
+            Continue
+          </button>
+          <button
+            id="button-2"
+            className="button-56 fade-in"
+            onClick={() => handleButtonClick('quotes')}
+          >
+            Quotes
+          </button>
+        </div>
       </div>
     </div>
   );
