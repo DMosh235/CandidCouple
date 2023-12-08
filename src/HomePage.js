@@ -33,7 +33,7 @@ const HomePage = () => {
             className="button-56 fade-in"
             onClick={() => handleButtonClick('quotes')}
           >
-            Quotes
+            Quote Page
           </button>
           <button
             id="button-3"
