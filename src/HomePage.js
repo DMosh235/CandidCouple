@@ -8,8 +8,12 @@ const HomePage = () => {
   const navigate = useNavigate();
 
   const handleButtonClick = (page) => {
-    // Navigate to the corresponding page when a button is clicked
-    navigate(`/${page}`);
+    if (page === 'youtube') {
+      // Redirect to the YouTube Shorts link
+      window.location.href = 'https://www.youtube.com/shorts/4Fi4DnzfgnY';
+    } else {
+      navigate(`/${page}`);
+    }
   };
 
   return (
@@ -30,6 +34,13 @@ const HomePage = () => {
             onClick={() => handleButtonClick('quotes')}
           >
             Quotes
+          </button>
+          <button
+            id="button-3"
+            className="button-56 fade-in"
+            onClick={() => handleButtonClick('youtube')}
+          >
+            Secret Gift :P
           </button>
         </div>
       </div>
